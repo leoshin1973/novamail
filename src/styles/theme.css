@@ -1,0 +1,201 @@
+/* ==========================================================================
+   Aura Mail - macOS Design System & Multi-Theme CSS Variables
+   ========================================================================== */
+
+/* 1. 기본 글로벌 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard Variable", Pretendard, "SF Pro Text", "Helvetica Neue", sans-serif;
+  user-select: none;
+  overflow: hidden;
+  background-color: var(--bg-window);
+  color: var(--text-primary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* 2. 테마별 CSS 변수 정의 */
+
+/* [Theme 1: macOS Dark] - 깊고 우아한 다크 모드 */
+:root, [data-theme="macos-dark"] {
+  --bg-window: #1e1e1f;
+  --bg-sidebar: rgba(36, 36, 38, 0.85);
+  --bg-maillist: #28282a;
+  --bg-mailview: #1e1e1f;
+  --bg-card: #323235;
+  --bg-card-hover: #3d3d42;
+  --bg-card-selected: #0a60ff;
+  --text-card-selected: #ffffff;
+  
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-focus: #0a60ff;
+  
+  --text-primary: #f5f5f7;
+  --text-secondary: #a1a1a6;
+  --text-muted: #6e6e73;
+  
+  --accent: #0a84ff;
+  --accent-hover: #409cff;
+  --accent-light: rgba(10, 132, 255, 0.15);
+  --danger: #ff453a;
+  --danger-light: rgba(255, 69, 58, 0.15);
+  --warning: #ffd60a;
+  --success: #30d158;
+  
+  --traffic-red: #ff5f56;
+  --traffic-yellow: #ffbd2e;
+  --traffic-green: #27c93f;
+  --traffic-stroke: rgba(0, 0, 0, 0.15);
+  
+  --shadow-popup: 0 16px 36px rgba(0, 0, 0, 0.45);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --backdrop-blur: blur(20px);
+}
+
+/* [Theme 2: macOS Light] - 눈부시지 않고 정갈한 화이트 */
+[data-theme="macos-light"] {
+  --bg-window: #f5f5f7;
+  --bg-sidebar: rgba(238, 238, 240, 0.88);
+  --bg-maillist: #ffffff;
+  --bg-mailview: #fbfbfd;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0f0f2;
+  --bg-card-selected: #007aff;
+  --text-card-selected: #ffffff;
+  
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-focus: #007aff;
+  
+  --text-primary: #1d1d1f;
+  --text-secondary: #515154;
+  --text-muted: #86868b;
+  
+  --accent: #007aff;
+  --accent-hover: #0062cc;
+  --accent-light: rgba(0, 122, 255, 0.1);
+  --danger: #ff3b30;
+  --danger-light: rgba(255, 59, 48, 0.1);
+  --warning: #ff9500;
+  --success: #34c759;
+  
+  --traffic-red: #ff5f56;
+  --traffic-yellow: #ffbd2e;
+  --traffic-green: #27c93f;
+  --traffic-stroke: rgba(0, 0, 0, 0.15);
+  
+  --shadow-popup: 0 16px 36px rgba(0, 0, 0, 0.12);
+  --shadow-card: 0 1px 4px rgba(0, 0, 0, 0.05);
+  --backdrop-blur: blur(20px);
+}
+
+/* [Theme 3: Nordic Slate] - 세련된 차콜 블루 & 아이스 틴트 */
+[data-theme="nordic-slate"] {
+  --bg-window: #19202b;
+  --bg-sidebar: rgba(21, 28, 38, 0.9);
+  --bg-maillist: #1e2634;
+  --bg-mailview: #171d27;
+  --bg-card: #273142;
+  --bg-card-hover: #313d52;
+  --bg-card-selected: #38bdf8;
+  --text-card-selected: #0f172a;
+  
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-focus: #38bdf8;
+  
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  --accent: #38bdf8;
+  --accent-hover: #7dd3fc;
+  --accent-light: rgba(56, 189, 248, 0.15);
+  --danger: #f87171;
+  --danger-light: rgba(248, 113, 113, 0.15);
+  --warning: #fbbf24;
+  --success: #34d399;
+  
+  --traffic-red: #ff5f56;
+  --traffic-yellow: #ffbd2e;
+  --traffic-green: #27c93f;
+  --traffic-stroke: rgba(0, 0, 0, 0.2);
+  
+  --shadow-popup: 0 16px 36px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --backdrop-blur: blur(20px);
+}
+
+/* [Theme 4: Warm Paper] - 눈이 편안한 감각적인 미색 서재 느낌 */
+[data-theme="warm-paper"] {
+  --bg-window: #f6f3ee;
+  --bg-sidebar: rgba(238, 233, 224, 0.9);
+  --bg-maillist: #fbf9f5;
+  --bg-mailview: #fdfcfa;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f3ede2;
+  --bg-card-selected: #7c5e43;
+  --text-card-selected: #ffffff;
+  
+  --border-subtle: rgba(124, 94, 67, 0.12);
+  --border-focus: #7c5e43;
+  
+  --text-primary: #2d2621;
+  --text-secondary: #6e645c;
+  --text-muted: #9c9187;
+  
+  --accent: #7c5e43;
+  --accent-hover: #967252;
+  --accent-light: rgba(124, 94, 67, 0.12);
+  --danger: #d9483b;
+  --danger-light: rgba(217, 72, 59, 0.12);
+  --warning: #d97706;
+  --success: #2f855a;
+  
+  --traffic-red: #ff5f56;
+  --traffic-yellow: #ffbd2e;
+  --traffic-green: #27c93f;
+  --traffic-stroke: rgba(0, 0, 0, 0.1);
+  
+  --shadow-popup: 0 16px 36px rgba(45, 38, 33, 0.1);
+  --shadow-card: 0 1px 4px rgba(45, 38, 33, 0.06);
+  --backdrop-blur: blur(16px);
+}
+
+/* 3. macOS 스타일 스크롤바 */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 140, 140, 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 140, 140, 0.5);
+}
+
+/* 4. 공통 유틸리티 */
+.titlebar-drag {
+  -webkit-app-region: drag;
+}
+.titlebar-nodrag {
+  -webkit-app-region: no-drag;
+}
+
+/* 5. 회전 애니메이션 */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spin {
+  animation: spin 1s linear infinite;
+}
